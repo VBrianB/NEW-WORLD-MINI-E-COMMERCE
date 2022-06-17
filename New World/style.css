@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .4s ease;
+}
+body{
+    background-image: url('img/Background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    min-height:100vh;
+}
+header{
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu{
+    max-width: 50px;
+    margin-left: 50px;
+}
+.cart{
+    max-width: 20px;
+    margin-right: 50px;
+}
+.models{
+    display: none;
+}
+.sneaker-area{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 
+    50px;
+    padding: 60px; 
+    align-items: center;
+   
+    
+}
+.sneaker--item{
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(48, 48, 48, 0.466);
+    padding: 40px;
+   
+    
+   
+    
+   
+}
+.sneaker--item:hover{
+box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.438);
+transform: scale(0.99);
+
+}
+
+
+
+.sneaker--img{
+    
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.sneaker--img IMG{
+    width: 240px;
+}
+
+.sneaker--more{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.sneaker--info{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.name-sneaker{
+    font-size: 24px;
+    font-weight: 500;
+}
+.price-sneaker{
+    font-size: 14px;
+}
+.add-button{
+    display: flex;
+    align-items: center;
+    
+   
+}.add-button:hover img{
+    transform: scale(1.2);
+}
+.add-button img{
+   max-width: 38px;
+ 
+}
+#windowArea{
+    width: 150px;
+    height: 150px;
+    position: absolute;left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(6, 4, 27);
+}
+
+
+
+
+
+@media (min-width:1440px){
+    .sneaker-area{
+    padding: 20% 60px;
+    gap: 
+    50px;
+   
+    }
+}
