@@ -19,6 +19,19 @@ body{
    
     min-height:100vh;
 }
+body::-webkit-scrollbar {
+    width: 5px;             
+}
+  
+body::-webkit-scrollbar-track {
+    background: rgb(19 24 32);     
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(19 24 32);   
+    border-radius: 20px;     
+    
+}
 header{
     padding: 40px 0;
     width: 100%;
@@ -33,7 +46,28 @@ header{
 .cart{
     max-width: 20px;
     margin-right: 50px;
+    z-index: 66;
+   
 }
+.cart-l{
+    position: relative;
+}
+.cart-l span{
+    position: absolute;
+    left: 10px;
+    top: -4 px;
+    z-index: 2;
+    background-color: rgb(6, 81, 245);
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+}
+
 .models{
     display: none;
 }
@@ -283,6 +317,200 @@ transform: scale(0.99);
     font-size: 24px;
 }
 
+
+aside{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(19 24 32);
+    z-index: 44;
+    min-width: 25vw;
+    transition: .6s;
+}
+aside.active{
+    
+    display: flex;
+    animation: Aside .6s ease;
+}
+@keyframes Aside{
+    from{
+        left: -350px;
+    }
+    to{
+        left: 0;
+    }
+}
+aside img{
+    margin: 3em;
+    max-width: 80px;
+}
+.btnAside{
+    position: absolute;
+   top: 20px;
+   right: 30px;
+   margin: 0;
+   max-width: 28px;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li span{
+    display: flex;
+    align-items: center;
+   
+    width: 100%;
+   
+}
+nav ul li{
+    margin: 3em 0;
+    padding-right: 190px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 14px;
+  
+}
+
+nav ul li span h3{
+    color: rgba(255, 255, 255, 0.671);
+    font-weight: 500;
+}
+nav ul li span h3:hover{
+    color: white;
+}
+nav ul li span img{
+    margin: 0 .5em;
+}
+nav ul li span img:hover{
+    cursor: pointer;
+   
+}
+
+.container-dropDown{
+    display: none;
+    flex-direction: column;
+    margin-top: 10px; 
+   
+   
+}
+.container-dropDown.active{
+    display: flex; 
+    animation: Drop .5s ease;
+      
+}
+.container-dropDown a{
+    color: rgba(255, 255, 255, 0.336);
+    margin: .5em 0;
+    padding: 10px 0;
+}
+.container-dropDown a:hover{
+   color: white;
+}
+
+#Cart{
+    display: none;
+    position:  fixed;
+    right: -550px;
+    bottom: 0;
+    min-width: 35vw;
+    height: 100%;
+    background-color: rgb(19 24 32);
+    color: white;
+    border-radius:15px 0px 0px 15px;
+    z-index: 4;
+}
+.items-area{
+    display: flex;
+    flex-direction: column;
+    max-height: 50%;
+    overflow-y: scroll;
+}
+.items-area::-webkit-scrollbar {
+    width: 5px;             
+}
+  
+.items-area::-webkit-scrollbar-track {
+    background: rgb(19 24 32);     
+}
+  
+.items-area::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.329);   
+    border-radius: 20px;     
+    
+}
+.cart--item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.363);
+    padding: 10px;
+    border-radius: 25px;
+    
+}
+.cart--item img{
+    max-width: 80px;
+}
+.cart--details{
+    
+    font-size: 14px;
+}
+.qtmenos{
+   width: 20px;
+   border-radius: 5px;
+   border: none;
+   margin-right: 5px;
+}
+.qtmais{
+    width: 20px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+}
+.closeCart{
+    max-width:28px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.prices{
+    padding: 20px;
+    width: 100%;
+    
+}
+.cart-price{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.514);
+    font-weight: 500;
+    font-size:16px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.menu, .cart, .btnAside, .closeModal, .closeCart:hover{
+cursor: pointer;
+}
+.finalize{
+    border: none;
+    background-color: rgb(6, 81, 245);
+    color: white;
+    border-radius: 32px;
+    padding: 12px 32px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.finalize:hover{
+    transform: translateY(-5px);
+}
+
+
 @keyframes openModal{
     from{
         width: 2%;
@@ -299,11 +527,16 @@ transform: scale(0.99);
         
     }
 }
-
-
-
-
-
+@keyframes Drop{
+    from{
+        height: 0;
+        opacity: 0;
+    }
+    to{
+        height: auto;
+        opacity: 1;
+    }
+}
 @media (min-width:1440px){
     .sneaker-area{
     padding: 20% 60px;
@@ -324,6 +557,22 @@ transform: scale(0.99);
     .sneaker--img img{
         width: 320px;
     }
+    aside{
+        min-width: 100vw;
+    }
+    nav ul li{
+        padding: 0;
+        margin: 1em 0;
+        text-align: center;
+        display: block;
+    }
+    nav ul li span{
+        display: block;
+    }
+    nav ul li span img{
+        display: none;
+    }
+   
 }
 @media (max-width:425px){
     .sneaker-area{
