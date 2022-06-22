@@ -80,14 +80,14 @@ q('#qtmenos').addEventListener('click', () => {
 })
 
 const CloseModal = () => {
-    let Body = q('.windowBody');
+    let Body = q('#windowBody');
     let WindowArea = q('.windowArea');
     let Btn = q('.closeModal')
     Body.style.opacity = 0;
     Btn.style.opacity = 0;
 
     setTimeout(() => {
-        Body.style.display = 'none';
+        Body.classList.remove('active') 
 
     }, 50);
 
@@ -107,19 +107,18 @@ const CloseModal = () => {
 }
 
 const openBodyWindows = () => {
-    let Body = q('.windowBody');
+    let Body = q('#windowBody');
     let WindowArea = q('.windowArea');
-
     if (WindowArea.style.width = '100%') {
-        Body.style.opacity = 0;
-        Body.style.display = 'grid';
+        Body.style.opacity = 1;
+        Body.classList.add('active') 
         setTimeout(() => {
             Body.style.opacity = 1;
             q('.closeModal').style.opacity = 1;
         }, 100);
     }
     else {
-        Body.style.display = 'none'
+        CloseModal();
     }
 }
 
