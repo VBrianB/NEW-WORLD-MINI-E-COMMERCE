@@ -24,7 +24,6 @@ SneakerJSON.map((item, index) => {
         q('.txt-stars').innerHTML = SneakerJSON[key].stars.toFixed(1);
         q('.reveal').innerHTML = `(${SneakerJSON[key].reveal})`;
         qs('.size').forEach((size, sizeIndex) => {
-            SneakerJSON[key].Size[sizeIndex]
             size.innerHTML = SneakerJSON[key].Size[sizeIndex];
             size.addEventListener('click', (e) => {
                 q('.size.selected').classList.remove('selected');
@@ -70,7 +69,6 @@ q('#qtmenos').addEventListener('click', () => {
         modalQt--;
 
         let ActualPrice = SneakerJSON[modalkey].price * modalQt;
-        let NewPrice = SneakerJSON[modalkey].price - SneakerJSON[modalkey].price;
         q('.price').innerHTML = `Preço Total: ${ActualPrice.toFixed(2)}`;
         q('.qt').innerHTML = modalQt;
     }
@@ -179,7 +177,6 @@ const updateCart = () =>{
 
         for(let i in cart){
             let SneakerItem = SneakerJSON.find((item) => item.id == cart[i].id);
-            console.log(SneakerItem);
             subtotal += SneakerItem.price * cart[i].Qt;
             let cartItem = q('.cart--item').cloneNode(true);
 
