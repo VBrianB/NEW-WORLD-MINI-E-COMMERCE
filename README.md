@@ -35,7 +35,7 @@ O projeto foi criado a partir dos conhecimentos que conquistei no meu curso, o i
  - HTML
  - CSS
  - JAVASCRIPT
- - VANILLA
+ - [vanillatilt](https://github.com/gijsroge/tilt.js)
 
 
 <br>
