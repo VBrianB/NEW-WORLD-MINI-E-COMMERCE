@@ -2,7 +2,7 @@
 
 Mini e-commerce criado a partir do conhecimento adquirido em meu curso, moderno e com algumas animações totalmente criado a partir de manipulação de DOM.
 
-<img src="NewWorld-Print.gif" />
+<img src="NewWorld-Print.gif" width="700px" height="400px" />
 
 
 
