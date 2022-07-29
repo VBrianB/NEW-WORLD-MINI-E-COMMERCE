@@ -2,6 +2,10 @@
 
 Mini e-commerce criado a partir do conhecimento adquirido em meu curso, moderno e com algumas animações totalmente criado a partir de manipulação de DOM.
 
+Você pode ver o projeto funcionando [AQUI](https://vbrianb.github.io/NEW-WORLD-MINI-E-COMMERCE/)
+
+
+
 <img src="NewWorld-Print.gif" width="700px" height="400px" />
 
 
